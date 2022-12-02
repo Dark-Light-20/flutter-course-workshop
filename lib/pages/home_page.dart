@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     final getPhotosProvider =
         Provider.of<PhotosProvider>(context, listen: true);
     return Scaffold(
+      drawer: const _HomeDrawer(),
       appBar: AppBar(
         title: const Text('Photos home'),
         elevation: 10,
@@ -20,6 +21,39 @@ class HomePage extends StatelessWidget {
           PhotosSwiper(photos: getPhotosProvider.photos),
           PhotosSlider(photos: getPhotosProvider.photos),
         ]),
+      ),
+    );
+  }
+}
+
+class _HomeDrawer extends StatelessWidget {
+  const _HomeDrawer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: ListView(
+        children: [
+          const DrawerHeader(
+            decoration: BoxDecoration(color: Colors.purple),
+            child: Text(
+              'Menu de usuarios',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          ListTile(
+            title: const Text(
+              'Ir a listado de usuarios',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+            ),
+            onTap: () {
+              // ...
+            },
+          ),
+        ],
       ),
     );
   }
