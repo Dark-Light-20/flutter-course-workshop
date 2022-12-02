@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:json_placeholder_workshop/providers/photos_provider.dart';
+import 'package:json_placeholder_workshop/pages/pages.dart';
+import 'package:json_placeholder_workshop/providers/providers.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -31,12 +32,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'JSON Placeholder Workshop',
-      // initialRoute: "home",
+      initialRoute: "home",
       routes: {
-        // "home": (context) => const HomePage(),
+        "home": (context) => const HomePage(),
       },
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.purple,
       ),
     );
   }
