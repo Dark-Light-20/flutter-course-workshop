@@ -33,6 +33,7 @@ class _HomeDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
+        padding: EdgeInsets.zero,
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(color: Colors.purple),
@@ -49,9 +50,7 @@ class _HomeDrawer extends StatelessWidget {
               'Ir a listado de usuarios',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
             ),
-            onTap: () {
-              // ...
-            },
+            onTap: () => Navigator.pushNamed(context, 'users'),
           ),
         ],
       ),

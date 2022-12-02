@@ -11,7 +11,6 @@ class PhotosResponse {
       PhotosResponse.fromMap(json.decode(str));
 
   factory PhotosResponse.fromMap(List<dynamic> json) => PhotosResponse(
-        // info: Info.fromMap(json["info"]),
         photos: List<Photo>.from(json.map((x) => Photo.fromMap(x))),
       );
 }

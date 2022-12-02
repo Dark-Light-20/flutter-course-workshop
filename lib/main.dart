@@ -17,7 +17,11 @@ class AppState extends StatelessWidget {
         ChangeNotifierProvider(
           create: (context) => PhotosProvider(),
           lazy: false,
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (context) => UsersProvider(),
+          lazy: false,
+        ),
       ],
       child: const MyApp(),
     );
@@ -36,6 +40,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "home": (context) => const HomePage(),
         "detail": (context) => const PhotoDetailPage(),
+        "users": (context) => const UsersPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple,
