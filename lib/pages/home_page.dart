@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(children: [
           PhotosSwiper(photos: getPhotosProvider.photos),
+          PhotosSlider(photos: getPhotosProvider.photos),
         ]),
       ),
     );
