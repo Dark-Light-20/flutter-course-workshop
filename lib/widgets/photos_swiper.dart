@@ -30,6 +30,8 @@ class PhotosSwiper extends StatelessWidget {
         itemBuilder: (context, index) {
           final Photo photo = photos[index];
           return GestureDetector(
+            onTap: () =>
+                Navigator.pushNamed(context, "detail", arguments: photo),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(

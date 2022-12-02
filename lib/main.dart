@@ -35,6 +35,7 @@ class MyApp extends StatelessWidget {
       initialRoute: "home",
       routes: {
         "home": (context) => const HomePage(),
+        "detail": (context) => const PhotoDetailPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple,

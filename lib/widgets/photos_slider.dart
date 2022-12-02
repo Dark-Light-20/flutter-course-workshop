@@ -51,6 +51,7 @@ class _PhotoItem extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: Column(children: [
         GestureDetector(
+          onTap: () => Navigator.pushNamed(context, "detail", arguments: photo),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: FadeInImage(
