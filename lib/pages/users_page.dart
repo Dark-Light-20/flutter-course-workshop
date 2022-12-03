@@ -35,7 +35,8 @@ class UsersPage extends StatelessWidget {
                 user.name,
                 style: const TextStyle(fontSize: 30),
               ),
-              onTap: () {},
+              onTap: () =>
+                  Navigator.pushNamed(context, 'userDetail', arguments: user),
             );
           },
           itemCount: users.length,

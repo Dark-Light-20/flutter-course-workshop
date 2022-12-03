@@ -39,8 +39,9 @@ class MyApp extends StatelessWidget {
       initialRoute: "home",
       routes: {
         "home": (context) => const HomePage(),
-        "detail": (context) => const PhotoDetailPage(),
+        "photoDetail": (context) => const PhotoDetailPage(),
         "users": (context) => const UsersPage(),
+        "userDetail": (context) => const UserDetailPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.purple,
